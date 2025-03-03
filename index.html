@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="AMT-Hyp">
+  <meta name="keywords" content="AMT-Hyp">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AMT-Hyp</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="website/css/bulma.min.css">
+  <link rel="stylesheet" href="website/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="website/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="website/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="website/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="website/js/fontawesome.all.min.js"></script>
+  <script src="website/js/bulma-carousel.min.js"></script>
+  <script src="website/js/bulma-slider.min.js"></script>
+  <script src="website/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">AMT-Hyp: Adversarial Multi-Task Reinforcement Learning Framework for Policy Generation using Hypernetworks
+            </h1>
+
+            <div class="is-size-8 publication-authors">
+              <!-- <span class="author-block">
+                <a href="https://sanketkalwar.github.io/" target="_blank"><span class="looking">Sanket&nbsp;Kalwar</span></a><sup>*1</sup>,</span> -->
+              <span class="author-block">
+                <a href="https://sanketkalwar.github.io/" target="_blank">Sanket&nbsp;Kalwar</a><sup>*1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://www.linkedin.com/in/jayaram6111997" target="_blank">Jayaram&nbsp;Reddy</a><sup>*1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://sites.google.com/view/brojeshwar/home" target="_blank">Brojeshwar&nbsp;Bhowmick</a><sup>2</sup>,
+              </span>              
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=0zgDoIEAAAAJ" target="_blank">Arun&nbsp;Singh</a><sup>3</sup>,
+              </span>
+
+              <span class="author-block">
+                <a href="https://www.iiit.ac.in/people/faculty/mkrishna/" target="_blank">Madhava&nbsp;Krishna</a><sup>1</sup>,
+              </span>
+
+            </div>
+
+            <div class="is-size-9 publication-authors">
+              <span class="author-block"><sup>1</sup>Robotic&nbsp;Research&nbsp;Center&nbsp;IIIT Hyderabad,
+                <sup>2</sup>TCS&nbsp;Research&nbsp;India,
+                <sup>3</sup>University&nbsp;of&nbsp;Tartu </span><br>
+                <small><sup>*</sup>Equal Contribution. Authors ordered randomly</small> </span>
+              <!-- <span class="author-block"><sup>2</sup>Cornell Tech, Cornell University &nbsp; </span> -->
+            </div>
+            
+            <!-- <span class="looking"><small>Looking for MS/PhD positions for FY 2024!</small></span> -->
+
+            <!-- <h1 style="font-size:16px;font-weight:bold">Accepted at ICRA 2024</h1> -->
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://drive.google.com/file/d/1-xXnJbDyHg7-mYNGxoEfV-4KhBltmMBp/view?usp=sharing"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>paper</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/AMT-Hyp/amt_hyp" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+      <source src="videos/AMT-Hyp_teaser_video.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">AMT-Hyp</span> an adversarial framework for Multi Task Reinforcement Learning (MTRL) 
+                                          using Hypernetworks
+      </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+
+        <div class="columns">
+          <div class="item item-fullbody column" style="text-align: center;">
+            <video poster="ocrtoc1" id="fullbody1" class="teaser-video" autoplay playsinline muted loop width="75%">
+              <source src="videos/ocrtoc/ocrtoc1.mp4" type="video/mp4">
+            </video>
+
+            <video poster="ocrtoc2" id="fullbody2" class="teaser-video" autoplay playsinline muted loop width="75%">
+              <source src="videos/ocrtoc/ocrtoc2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="subtitle has-text-centered">
+          EDMP generalizes to arbitrary scenes and objects <b>directly at inference</b>!
+        </h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+                <source src="videos/clutter1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+              <source src="videos/clutter5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+                <source src="videos/ocrtoc/ocrtoc1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+                <source src="videos/clutter2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+                <source src="videos/clutter3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-coffee">
+            <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+              <source src="videos/clutter4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+                <source src="videos/ocrtoc/ocrtoc2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+              <source src="videos/clutter6.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+              <source src="videos/clutter7.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+              <source src="videos/clutter8.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  
+    <!-- <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="subtitle has-text-centered">
+          EDMP at the time of <b>training</b>!
+        </h2> -->
+        <!-- <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+                <source src="videos/train1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+              <source src="videos/train2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+                <source src="videos/train3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+                <source src="videos/train4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-coffee">
+            <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+              <source src="videos/train5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+              <source src="videos/train6.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              A key challenge in building generalist agents is
+              enabling them to perform multiple tasks while simultaneously
+              adapting to variations across the tasks efficiently, particularly
+              in a zero-shot manner. Multi-task Reinforcement Learning
+              (MTRL) is a paradigm that enables agents to learn a single
+              policy that can be deployed to perform multiple tasks in a
+              given environment. A straightforward approach like parameter
+              sharing introduces challenges such as conflicting gradients and
+              determining the optimal way to distribute shared parameters
+              across tasks. In this work, we introduce AMT-Hyp, a framework
+              for training hypernetworks in MTRL that consists of HypLa-
+              tent, an adversarial autoencoder that generates diverse task-
+              conditioned latent policy parameters, and HypFormer, a single-
+              layer transformer that performs soft-weighted aggregation on
+              these priors towards expert policy parameters. Our approach
+              not only outperforms previous hypernetwork based methods
+              but also performs comparably to the existing state-of-the-art
+              methods in MTRL on MetaWorld benchmark. Additionally,
+              experiments on MuJoCo continuous control tasks demonstrate
+              the frameworks strong zero-shot learning capabilities, allowing
+              it to generalize to unseen in-distribution tasks without addi-
+              tional fine-tuning. Our framework also achieves performance
+              comparable to state-of-the-art offline meta-RL methods.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <section class="section">
+        <div class="container is-max-desktop">
+    
+          <div class="columns is-centered">
+            <div class="column is-full-width">
+              <h2 class="title is-3" style="text-align: center;">Overview</h2>
+              <div class="content has-text-justified" style="position: relative; z-index: 0;">
+                <img src="images/AMTHYP-Architecture_final1.jpg">
+          <p>
+            <b>Architecture.</b> consists of HypLatent, an adversarial autoencoder that generates diverse task-
+            conditioned latent policy parameters, and HypFormer, a single layer transformer that performs soft-weighted aggregation on
+            these priors towards expert policy parameters.
+          </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- <section>
+    	<h2 class="title is-3" style="text-align: center; margin-bottom:-25px">Results</h2>
+    
+    <div class="hero-body edmp-diff-vis">
+      <div class="container">
+        <h2 class="subtitle has-text-centered">
+          Visualizing EDMP's diffusion steps at the time of inference</b>!
+        </h2>
+        <div id="results-carousel" class="carousel results-carousel"> -->
+          <!-- <br> -->
+          <!-- <div class="item item-toby">
+            <video poster="" id="toby" autoplay muted loop playsinline height="300%">
+                <source src="videos/denoisings/denoising_video_speedened1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay muted loop playsinline height="140%">
+              <source src="videos/denoisings/denoising_video_speedened2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay muted loop playsinline height="140%">
+                <source src="videos/denoisings/denoising_video_speedened3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay muted loop playsinline height="140%">
+                <source src="videos/denoisings/denoising_video_speedened4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay muted loop playsinline height="140%">
+                <source src="videos/denoisings/denoising_video_speedened5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-coffee">
+            <video poster="" id="coffee" autoplay muted loop playsinline height="140%">
+              <source src="videos/denoisings/denoising_video_speedened6.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay muted loop playsinline height="140%">
+                <source src="videos/denoisings/denoising_video_speedened7.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay muted loop playsinline height="140%">
+              <source src="videos/denoisings/denoising_video_speedened8.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+       -->
+
+
+      <!--<section class="section" style="margin-bottom: -80px;">
+        <div class="container is-max-desktop">
+
+          <div class="columns is-centered has-text-centered" style="margin-bottom: -30px;">
+            <h2 class="title is-3">Ensemble of costs guided diffusion</h2>
+            <h2 class="title is-3"> Visualizing diffusion-steps at the time of inference!</h2>
+          </div>
+        
+          <div class="hero-body">
+            <center>
+              <video id="teaser" autoplay muted loop playsinline width="99%">
+                <source src="videos/icra_24_single_classifier_24P_h264.mp4" type="video/mp4">
+              </video>
+            </center>
+          </div>
+        </div>
+      </section>-->
+
+      <!-- <section class="hero teaser">
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <center>
+            	<h2 class="subtitle has-text-centered">
+		  EDMP generalizes to any scene <b>without (left)</b> and <b>with (right)</b> holding objects!
+		</h2>
+              <video id="teaser" autoplay muted loop playsinline width="60%" style="mid-width: 370px">
+                <source src="videos/with-without-grasp-clipped.mp4" type="video/mp4">
+              </video>
+            </center>
+          </div>
+        </div>
+      </section>
+      
+        <section class="hero teaser">
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <center>
+            	<h2 class="subtitle has-text-centered">
+		  Based on diffusion, EDMP generates multimodal trajectories! .. As we show in the paper, the ensemble-of-costs further improves the multimodality!
+		</h2>
+              <video id="teaser" autoplay muted loop playsinline width="40%" style="min-width:310px">
+                <source src="videos/MM_v2.mp4" type="video/mp4">
+              </video>
+            </center>
+          </div>
+        </div>
+      </section> -->
+
+  <!--/ Paper video. -->
+  <!-- <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h3 class="title is-3">Acknowledgements</h3>
+      <div class="content has-text-justified">
+        <p>
+          We would like to thank Adam Fishman for assisting with MπNets and providing valuable insights into collision checking and benchmarking.
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </section> -->
+<!-- 
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+@misc{saha2023edmp,
+      title={EDMP: Ensemble-of-costs-guided Diffusion for Motion Planning}, 
+      author={Kallol Saha and Vishal Mandadi and Jayaram Reddy and Ajit Srikanth and Aditya Agarwal and Bipasha Sen and Arun Singh and Madhava Krishna},
+      year={2023},
+      eprint={2309.11414},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO}
+}
+    </code></pre>
+    </div>
+  </section>
+   -->
+  <div hidden="hidden">
+  <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=2oCrnzNWBNsmNO2WGMHvLpem_9_jluEUy9J8i0GRHJw"></script>
+  </div>
+
+
+  <footer class="footer">
+    <div align="center" class="container">
+      <div class="columns is-centered">
+        <div class="content">
+          <br> The source code for this website is borrowed from <a
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
