@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="AMT-Hyp">
-  <meta name="keywords" content="AMT-Hyp">
+  <meta name="description" content="GenHyper">
+  <meta name="keywords" content="GenHyper">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AMT-Hyp</title>
+  <title>GenHyper</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -45,20 +45,29 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">AMT-Hyp: Adversarial Multi-Task Reinforcement Learning Framework for Policy Generation using Hypernetworks
+            <h1 class="title is-1 publication-title">GenHyper : Adversarial Generative Hypernetworks for Efficient Policy Adaptation
             </h1>
 
             <div class="is-size-8 publication-authors">
               <!-- <span class="author-block">
                 <a href="https://sanketkalwar.github.io/" target="_blank"><span class="looking">Sanket&nbsp;Kalwar</span></a><sup>*1</sup>,</span> -->
               <span class="author-block">
-                <a href="https://sanketkalwar.github.io/" target="_blank">Sanket&nbsp;Kalwar</a><sup>*1</sup>,
-              </span>
-              <span class="author-block">
                 <a href="http://www.linkedin.com/in/jayaram6111997" target="_blank">Jayaram&nbsp;Reddy</a><sup>*1</sup>,
               </span>
               <span class="author-block">
+                <a href="https://sanketkalwar.github.io/" target="_blank">Sanket&nbsp;Kalwar</a><sup>*1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://anant-garg205.github.io/" target="_blank">Anant&nbsp;Garg</a><sup>*1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://vishal-2000.github.io/" target="_blank">Vishal&nbsp;Mandadi</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
                 <a href="https://sites.google.com/view/brojeshwar/home" target="_blank">Brojeshwar&nbsp;Bhowmick</a><sup>2</sup>,
+              </span>  
+              <span class="author-block">
+                <a href="https://sites.google.com/view/brojeshwar/home" target="_blank">Snehasis&nbsp;Banerjee</a><sup>2</sup>,
               </span>              
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=0zgDoIEAAAAJ" target="_blank">Arun&nbsp;Singh</a><sup>3</sup>,
@@ -85,7 +94,7 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://drive.google.com/file/d/1-xXnJbDyHg7-mYNGxoEfV-4KhBltmMBp/view?usp=sharing"
+                  <a href="IROS25_GenHyper_submission_final.pdf"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -95,7 +104,7 @@
                 </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/AMT-Hyp/amt_hyp" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/GenHyper/amt_hyp" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -114,11 +123,10 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-      <source src="videos/AMT-Hyp_teaser_video.mp4" type="video/mp4">
+      <source src="videos/IROS_GenHyper_final_submission_3513.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">AMT-Hyp</span> an adversarial framework for Multi Task Reinforcement Learning (MTRL) 
-                                          using Hypernetworks
+        <span class="dnerf">GenHyper</span> Adversarial Generative Hypernetworks for Efficient Policy Adaptation
       </h2>
       </div>
     </div>
@@ -255,29 +263,27 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              A key challenge in building generalist agents is
-              enabling them to perform multiple tasks while simultaneously
-              adapting to variations across the tasks efficiently, particularly
-              in a zero-shot manner. Multi-task Reinforcement Learning
-              (MTRL) is a paradigm that enables agents to learn a single
-              policy that can be deployed to perform multiple tasks in a
-              given environment. A straightforward approach like parameter
-              sharing introduces challenges such as conflicting gradients and
-              determining the optimal way to distribute shared parameters
-              across tasks. In this work, we introduce AMT-Hyp, a framework
-              for training hypernetworks in MTRL that consists of HypLa-
-              tent, an adversarial autoencoder that generates diverse task-
-              conditioned latent policy parameters, and HypFormer, a single-
-              layer transformer that performs soft-weighted aggregation on
-              these priors towards expert policy parameters. Our approach
-              not only outperforms previous hypernetwork based methods
-              but also performs comparably to the existing state-of-the-art
-              methods in MTRL on MetaWorld benchmark. Additionally,
-              experiments on MuJoCo continuous control tasks demonstrate
-              the frameworks strong zero-shot learning capabilities, allowing
-              it to generalize to unseen in-distribution tasks without addi-
-              tional fine-tuning. Our framework also achieves performance
-              comparable to state-of-the-art offline meta-RL methods.
+              Reinforcement Learning (RL) often requires large
+              number of environment interactions to generalize to unseen
+              in-distribution tasks, particularly when policy initialization is
+              suboptimal. Existing meta-RL and transformer-based methods
+              adapt to unseen tasks with few demonstrations but usually
+              require training on many tasks (usually 85% of tasks in
+              task distribution). To address this challenge, we propose a
+              novel framework that leverages adversarial hypernetworks to
+              generate strong policy initializations on unseen tasks, enabling
+              rapid adaptation with minimal interactions, even when pre-
+              trained on as minimum as 30% of tasks. We demonstrate the
+              effectiveness of our approach on MuJoCo continuous control
+              tasks, showcasing strong zero-shot policy initialization and
+              rapid adaptation on unseen tasks. Additionally, we demonstrate
+              that our framework can be extended to Multi-Task RL (MTRL)
+              setting, where it outperforms existing hypernetwork based
+              methods on manipulation tasks from MetaWorld benchmark.
+              Through rigorous experimentation, we show that our frame-
+              work outperforms the prior competitive baselines from in-
+              context RL and meta RL on zero-shot transfer and enables
+              efficient adaptation to unseen in-distribution tasks.
             </p>
           </div>
         </div>
@@ -291,12 +297,12 @@
             <div class="column is-full-width">
               <h2 class="title is-3" style="text-align: center;">Overview</h2>
               <div class="content has-text-justified" style="position: relative; z-index: 0;">
-                <img src="images/AMTHYP-Architecture_final1.jpg">
-          <p>
+                <img src="images/GenHyper_architecture.png">
+          <!-- <p>
             <b>Architecture.</b> consists of HypLatent, an adversarial autoencoder that generates diverse task-
             conditioned latent policy parameters, and HypFormer, a single layer transformer that performs soft-weighted aggregation on
             these priors towards expert policy parameters.
-          </p>
+          </p> -->
               </div>
             </div>
           </div>

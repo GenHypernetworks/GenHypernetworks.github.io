@@ -1,2 +1,2 @@
-# AMT-Hyp
-AMT-Hyp project page
+# GenHyper
+GenHyper project page
