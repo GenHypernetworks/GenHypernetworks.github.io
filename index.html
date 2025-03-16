@@ -325,6 +325,56 @@
             these priors towards expert policy parameters.
           </p> -->
               </div>
+              <div>
+                <h2 class="title is-3" style="text-align: center;">Section 1: Zero Shot Initialization + Efficient Adaptation</h2>
+                <!-- <h3 class="title is-3" style="text-align: center;">Twid</h3> -->
+                <div class="content has-text-justified">
+                  <p>
+                    <b>Components:</b>
+                    <ul>
+                      <li><b>HypLatent.</b> An generative adversarial framework with generator trained to predict policy parameters given the MDP parameters of the given task as input. The discriminator trains in parallel with the generator to discriminate synthetic parameters from the ground truth parameters, thereby forcing the generator to learn to predict parameters closer to the ground truth.</li>
+                      <img src="images/hyplatent.png">
+                      <li><b>Auxillary Network (Q).</b> This is a neural network that learns to reconstruct the MDP parameters, given an output token from the discriminator. Through this network, we ensure that the information related to the task (represented by MDP parameters) is not lost as the network trains with time, reducing the chance of mode convergence and other associated local minima</li>
+                      <img src="images/auxillary.png">
+                    </ul>
+                  </p>
+                  <p>
+                    <b>Zero-shot Policy Initialization.</b> For a given Mujoco Continuous environment, this framework is trained on a subset of tasks. The subset size is varied from 30% to 85% of the total tasks. The trained model is then tested on unseen tasks from the same environment. We show that the generator model is able to generalize zero-shot to unseen tasks, even when trained on as minimum as 30% of tasks. 
+                  </p>
+                  <p>
+                    <b>Efficient Adaptation.</b> We propose to use TD-regularized actor-critic method to adapt the zero-shot policy to the unseen task. We show that the policy is able to adapt to the unseen task with minimal interactions.
+                  </p>
+                  <img src="images/efficient_adapt.png">
+                  <p>We tested our framework on Mujoco's Hopper and Ant-Direction environments. Please refer to the paper for detailed section on experiments.</p>
+                </div>
+              </div>
+
+              <div>
+                <h2 class="title is-3" style="text-align: center;">Section 2: Extension to Multi-Task RL </h2>
+                <!-- <h3 class="title is-3" style="text-align: center;">Twid</h3> -->
+                <div class="content has-text-justified">
+                  <p>
+                    <b>Components:</b>
+                    <ul>
+                      <li><b>Autoencoder.</b> For MTRL tasks, instead of directly training the generator to predict policy parameters, we choose to operate in the latent space, similar to the paper <a href="https://cheryyunl.github.io/make-an-agent/" class="uline-special"><span style="color:crimson">Make-An-Agent</span></a>. For this, we use an autoencoder to encode the policy neural network parameters as latent embeddings. The encoder is trained to predict latent embeddings given the policy parameters, and the decoder is trained to reconstruct the policy parameters given the latent embeddings. The autoencoder is trained with a reconstruction loss and a KL divergence loss to ensure that the latent embeddings are close to a standard normal distribution.</li>
+                      <li><b>HypLatent.</b> An generative adversarial framework with generator trained to predict latent embeddings of policy parameters (unlike the previous section where the generator predicted policy parameters directly). The discriminator trains in parallel with the generator to discriminate synthetic latent embeddings from the ground truth latent embeddings, thereby forcing the generator to learn to predict latent embeddings closer to the ground truth.</li>
+                      <li><b>Using Behavior Embeddings to Represent the Task.</b> Unlike previous section, where each task is represented by its MDP parameters, we choose to represent the task by its behavior embeddings, as it was proved to be more efficient representation for MTRL tasks (citing <a href="https://cheryyunl.github.io/make-an-agent/" class="uline-special"><span style="color:crimson">Make-An-Agent</span></a>). Thus, HypLatent's generator takes the behavior embedding as input, instead of MDP parameters, for MTRL tasks.</li>
+                      <li><b>Auxillary Network (Q).</b> This is a neural network that learns to reconstruct the behavior embeddings (unlike the previous section, where it reconstructs MDP parameters of the task), given an output token from the discriminator. Through this network, we ensure that the information related to task (represented by behavior embeddings) is not lost as the network trains with time, reducing the chance of mode convergence and other associated local minima</li>
+                      <li><b>HypFormer.</b> (Editing...)</li>
+                      <img src="images/mtrl_arch.png">
+                    </ul>
+                  </p>
+
+                  <p>
+                    <b>MTRL Setting.</b> (Editing...)
+                  </p>
+                  <!-- <p>
+                    <b>Adversarial Hypernetworks.</b> We propose a novel framework that leverages adversarial hypernetworks to generate strong policy initializations on unseen tasks, enabling rapid adaptation with minimal interactions, even when pre-trained on as minimum as 30% of tasks.
+                  </p>
+                  <p>
+                    <b>Hypernetworks.</b> Our architecture consists of HypLatent, an adversarial autoencoder that generates diverse task-conditioned latent policy parameters, and HypFormer, a single layer transformer that performs soft-weighted aggregation on these priors towards expert policy parameters.
+                  </p> -->
+                </div>
             </div>
           </div>
         </div>
