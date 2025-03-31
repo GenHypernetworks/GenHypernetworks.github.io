@@ -368,11 +368,10 @@
                         <ul>
                           <li><b>HypFormer Architecture:</b> We introduce two MLP branches: the latent head and the residue head.</li>
                           <li><b>Latent Head:</b> Trained to predict the ground truth latent policy embedding.</li>
-                          <li><b>Residue Head:</b> Learns the residual between the generator's latent policy embedding and the ground truth.</li>
+                          <li><b>Residue Head:</b> Learns the residual between the generator's latent policy embedding and the ground truth latent policy embedding.</li>
                           <li><b>Consistency Loss:</b> Applied to ensure consistency between the latent head and residue head.</li>
-                          <li>For a detailed explanation of individual loss terms and notations, please refer to the paper.</li>
+                          <li>For a detailed explanation of individual loss terms and notations, please refer to Section V(b) of the paper. </li>
                         </ul>                        
-                        Please refer to Section V(b) of the paper. </li>
                       <img src="images/mtrl_arch.png">
                     </ul>
                   </p>
