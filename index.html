@@ -350,11 +350,22 @@
               </div>
 
               <div>
-                <h2 class="title is-3" style="text-align: center;">Section 2: Extension to Multi-Task RL </h2>
+                <h2 class="title is-3" style="text-align: center;">Section 2: Extension to Multi-Task RL (MTRL) </h2>
                 <!-- <h3 class="title is-3" style="text-align: center;">Twid</h3> -->
                 <div class="content has-text-justified">
+
+                  <!-- We extend the above framework to MTRL setting and we show competitperformance on seen tasks compared to prior state-of-the-art hypernetwork based frameworks on MetaWorld benchmark.  -->
                   <p>
-                    <b>MTRL Setting.</b> We consider an agent interacting with an environment to perform multiple tasks sampled from a task distribution. Multi-Task Reinforcement Learning (MTRL) can be modeled as a Block Contextual Markov Decision Process (BC-MDP), where the context space represents shared information across tasks, the state space is universal, the action space is common, and each context maps to its specific task parameters. The goal of MTRL is to learn a single policy that maximizes the cumulative expected return across all tasks. While tasks share a universal state space, individual tasks may have distinct state spaces, as seen in benchmarks like MetaWorld, where variations arise due to differences in object interactions and behaviors.
+                    <b>MTRL Setting.</b> We also show that our framework, with a few changes, can be efficiently adapted to MTRL setting. In an MTRL setting, all the tasks share similar action space, but different state spaces. Similar to prior work <a href="https://cheryyunl.github.io/make-an-agent/" class="uline-special"><span style="color:crimson">Make-An-Agent</span></a>, we assume the dimensionality of the state space for each of these tasks to be the same. Now, the goal of MTRL works, specifically, hypernetwork-based MTRL works, is to learn a common representation space for all the tasks seen during the training phase. Post-training, the hypernetwork must be capable of predicting accurate policy weights for each of the training tasks. At the same time, the hypernetwork must also be able to predict policy parameters for newer tasks when provided with their behavior embeddings.
+
+
+                    We show that our work outperforms the prior hypernetwork-based work on tasks seen during training time. This shows that the trained framework is effective at retaining training tasks' shared representations and unshared nuances to a great extent. At newer tasks, we perform at par with the SOTA <a href="https://cheryyunl.github.io/make-an-agent/" class="uline-special"><span style="color:crimson">Make-An-Agent</span></a>. 
+  
+                    
+                    With additional changes such as "HypFormer" (which is further explained below, and in the paper), our work greatly improves its performance on training tasks. 
+                    
+                    
+                    <!-- We consider an agent interacting with an environment to perform multiple tasks sampled from a task distribution. Multi-Task Reinforcement Learning (MTRL) can be modeled as a Block Contextual Markov Decision Process (BC-MDP), where the context space represents shared information across tasks, the state space is universal, the action space is common, and each context maps to its specific task parameters. The goal of MTRL is to learn a single policy that maximizes the cumulative expected return across all tasks. While tasks share a universal state space, individual tasks may have distinct state spaces, as seen in benchmarks like MetaWorld, where variations arise due to differences in object interactions and behaviors. -->
                   </p>   
 
                   <p>
