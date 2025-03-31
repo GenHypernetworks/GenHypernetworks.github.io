@@ -358,10 +358,12 @@
                   <p>
                     <b>MTRL Setting.</b> We also show that our framework, with a few changes, can be efficiently adapted to MTRL setting. In an MTRL setting, all the tasks share similar action space, but different state spaces. Similar to prior work <a href="https://cheryyunl.github.io/make-an-agent/" class="uline-special"><span style="color:crimson">Make-An-Agent</span></a>, we assume the dimensionality of the state space for each of these tasks to be the same. Now, the goal of MTRL works, specifically, hypernetwork-based MTRL works, is to learn a common representation space for all the tasks seen during the training phase. Post-training, the hypernetwork must be capable of predicting accurate policy weights for each of the training tasks. At the same time, the hypernetwork must also be able to predict policy parameters for newer tasks when provided with their behavior embeddings.
 
-
+                    <br/>
+                    <br/>
                     We show that our work outperforms the prior hypernetwork-based work on tasks seen during training time. This shows that the trained framework is effective at retaining training tasks' shared representations and unshared nuances to a great extent. At newer tasks, we perform at par with the SOTA <a href="https://cheryyunl.github.io/make-an-agent/" class="uline-special"><span style="color:crimson">Make-An-Agent</span></a>. 
   
-                    
+                    <br/>
+                    <br/>
                     With additional changes such as "HypFormer" (which is further explained below, and in the paper), our work greatly improves its performance on training tasks. 
                     
                     
