@@ -366,7 +366,11 @@
                   </p>
 
                   <p>
-                    <b>MTRL Setting.</b> (Editing...)
+                    <b>MTRL Setting.</b> 
+                    <li>
+                      We consider an agent interacting with an environment to perform multiple tasks \( T = \{\tau_1, \tau_2, \dots, \tau_N\} \) sampled from a task distribution \( P(\tau) \). Multi-Task Reinforcement Learning (MTRL) can be modeled as a Block Contextual Markov Decision Process (BC-MDP) ⟨C, S, A, M′⟩, where C represents the shared context space, S is the universal state space, A is the shared action space, and M′ maps each context to its task-specific MDP parameters. The goal of MTRL is to learn a single policy \( \pi_{MTRL} \) that maximizes the cumulative expected return across all tasks. While tasks share a universal state space, individual tasks may have disjoint state spaces, as seen in benchmarks like MetaWorld, where variations arise due to differences in object interactions and behaviors.
+                    </li>
+                    
                   </p>
                   <!-- <p>
                     <b>Adversarial Hypernetworks.</b> We propose a novel framework that leverages adversarial hypernetworks to generate strong policy initializations on unseen tasks, enabling rapid adaptation with minimal interactions, even when pre-trained on as minimum as 30% of tasks.
